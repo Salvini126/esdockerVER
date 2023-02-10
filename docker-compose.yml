@@ -21,11 +21,10 @@ services:
       volumes:
         - ./server:/app
       ports:
-        - 5000:5000
-        
-mongo-server:
+        - 5000:5000     
+  mongo-server:
     image: mongo:latest     #Possiamo specificare 'immagine anche da qui senza usare un Dockerfile
-    hostname: test_mongodb  #cambia l'hostname da mongo-server a test_mongo
+    hostname: test_mongodb  #c/workspace/esdockerVER/client/node_modulesambia l'hostname da mongo-server a test_mongo
     environment:            #setta alcune variabili d'ambiente
       - MONGO_INITDB_DATABASE=animal_db
       - MONGO_INITDB_ROOT_USERNAME=root
